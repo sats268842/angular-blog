@@ -24,9 +24,9 @@
         </div>
       <div class="content">
         {{ article.descriptiopn }}
-        <a href="#">Continue Reading.........</a>
+        <a routerLink="/{{article.key}}">Continue Reading.........</a>
         <br>
-        <time datetime=article.date>{{ article.date.toDateString() }}</time>
+        <time datetime=article.date>{{ article.date | date }}</time>
       </div>
     </div>
 

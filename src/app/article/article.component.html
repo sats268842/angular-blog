@@ -1,0 +1,15 @@
+<section class="section">
+  <div class="container pt-4">
+<div>
+  <img class="article-image image" [src]="article.imageUrl" alt="">
+  <h1 class="pt-6">{{ article.title }}</h1>
+  <div class="pt-1">
+    {{ article.date | date}}
+  </div>
+<div class="pt-6">
+  <p [innerHTML]="article.content"></p>
+</div>
+</div>
+
+</div>
+</section>

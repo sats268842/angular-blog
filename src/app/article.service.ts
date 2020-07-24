@@ -3,18 +3,26 @@ import { Observable, of } from 'rxjs';
 
 import { Article } from './articles.model';
 import { ARTICLES } from './mock-article';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
   getArticles(): Observable<Article[]> {
-    const articles: Article[] = ARTICLES;
-    return of(articles);
+
+    return this.http.get<Article[]>("http://localhost:8000/articles")
+
+  }
+
+  getArticle(key: string): Observable<Article> {
+
+    return this.http.get<Article>("http://localhost:8000/articles/"+ key);
+
 
   }
 }
