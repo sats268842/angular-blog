@@ -1,1 +1,39 @@
-<p>atricle-list works!</p>
+<section class="section">
+  <div class="container">
+
+<div *ngFor="let article of articles">
+  <div class="card">
+    <div class="card-image">
+
+    <header class="card-header">
+      <p class="card-header-title">
+        {{ article.title }}
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-content">
+          <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img [src]=article.imageUrl alt="Placeholder image">
+        </figure>
+        </div>
+      <div class="content">
+        {{ article.descriptiopn }}
+        <a href="#">Continue Reading.........</a>
+        <br>
+        <time datetime=article.date>{{ article.date.toDateString() }}</time>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+</section>

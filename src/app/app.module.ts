@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AtricleListComponent } from './atricle-list/atricle-list.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    AtricleListComponent
+    AtricleListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Article } from '../articles.model';
+
+import { ARTICLES } from '../mock-article';
 @Component({
   selector: 'app-atricle-list',
   templateUrl: './atricle-list.component.html',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtricleListComponent implements OnInit {
 
+
+  articles: Article[] = [];
   constructor() { }
 
   ngOnInit(): void {
+
+    this.articles = ARTICLES;
   }
 
 }
